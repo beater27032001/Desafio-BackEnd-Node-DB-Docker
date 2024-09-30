@@ -1,0 +1,11 @@
+services:
+  postgres:
+    container_name: resume_ai
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: Carlos2001
+      POSTGRES_USER: postgres
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
